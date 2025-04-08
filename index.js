@@ -1,15 +1,13 @@
 // reverse all the elements in the string in ascending order and the specific elements in descending order
 function reversedstr(arr) {
-    return arr.map(str => str.split('').reverse().join('')).sort();}
-  function specificItem(arr, indices) {
-    return arr.map((str, index) => {
-      if (indices.includes(index)) {
+    return arr.map(str => str.split('').join('')).sort();}
+  function specificItem(arr, indices)
+   { return arr.map((str, index) => {if (indices.includes(index)) {
         return str.split('').reverse().join('');}
-      return str;
-    }).sort((a, b) => a.b);}
+      return str }).sort((a, b) => a+b);
+    }
     
   let strs = ["Thinkpad", "X1 Carbon", "Yoga", "IdeaPad"];
-  console.log(reversedstr(strs));
   console.log(specificItem(strs, [1 ,2]));
 
 // Using JS functions and an array of numbers, return positive if an element within the array is positive, negative if an element is negative, else zero
@@ -17,7 +15,7 @@ function reversedstr(arr) {
     return arr.map(num => {
       if (num > 0) return 'positive';
       if (num < 0) return 'negative';
-      return 'zero';});}
+     else  return 'zero';});}
   let num= [-2,-90,10,5,35];
   console.log(spotNum(num));
 
@@ -36,9 +34,7 @@ function reversedstr(arr) {
 
 function sortedsalary(employees) {
   return employees.sort((a, b) => a - b);}
-let employees = [
-  { id: 4, name: 'Esther', salary: 500 },
-  { id: 8, name: 'James', salary: 600},];
+let employees = [{ id: 4, name: 'Esther', salary: 500 },{ id: 8, name: 'James', salary: 600},];
 console.log(sortedsalary(employees));
 
 // Write a function that takes in an array of numbers and consoles the first four items multiplied by 8 and the last two added by 5. Console the array with the new values
