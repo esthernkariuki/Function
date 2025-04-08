@@ -4,7 +4,7 @@ function reversedstr(arr) {
   function specificItem(arr, indices)
    { return arr.map((str, index) => {if (indices.includes(index)) {
         return str.split('').reverse().join('');}
-      return str }).sort((a, b) => a+b);
+      return str }).sort((a, b) => a-b);
     }
     
   let strs = ["Thinkpad", "X1 Carbon", "Yoga", "IdeaPad"];
